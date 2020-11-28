@@ -2,20 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        
-        {% block stylesheet %}
-        <link rel="icon" href="/assets/images/castle-50.png">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheet %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
     </head>
     <body>
-        {% block header %}
-        {% endblock %}
-        
+        <header>
+            {% include 'navbar.html.twig' %}
+        </header>
         {% block body %}
         {% endblock %}
 
