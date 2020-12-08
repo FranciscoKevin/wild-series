@@ -5,9 +5,11 @@ namespace App\Controller;
 use App\Entity\Program;
 use App\Entity\Season;
 use App\Entity\Episode;
+use App\Form\ProgramType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
@@ -29,9 +31,39 @@ class ProgramController extends AbstractController
             ->findAll();
 
         return $this->render(
-            'program/index.html.twig',
-            ['programs' => $programs]
-        );
+            'program/index.html.twig', [
+            'programs' => $programs
+        ]);
+    }
+
+    /**
+     * The controller for the category add form
+     *
+     * @Route("/new", name="new")
+     * @return Response
+     */
+    public function new(Request $request): Response
+    {   
+        //Créer un nouvel objet Program
+        $program = new Program();
+        //Créer le formulaire associé
+        $form = $this->createForm(ProgramType::class, $program);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            //Traite les données soumises
+            //Obtenir le gestionnaire d'entités
+            $entityManager = $this->getDoctrine()->getManager();
+            // Persist de l'objet Program
+            $entityManager->persist($program);
+            //Execute la requete de l'objet
+            $entityManager->flush();
+            //Redirection vers la page index de programme
+            return $this->redirectToRoute('program_index'); 
+        }
+
+        return $this->render('program/new.html.twig', [
+            "form" => $form->createView(),
+        ]);
     }
 
     /**
