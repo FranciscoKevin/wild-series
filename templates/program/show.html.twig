@@ -10,12 +10,23 @@
             <div class="media-body">
                 <h1 class="mt-0">{{ program.title }}</h1>
                 <p>{{ program.summary }}</p>
-                <p> Catégorie: {{ program.category.name }} </p>
+                <p>Catégory: {{ program.category.name }} </p>
             </div>
             <div class="media-body">
                 {% for season in program.seasons %}
-                    <p class="mt-0"> <a href="{{ path('program_season_show', {programId: program.id, seasonId: season.id}) }}">Saison {{ season.number }}</a></p>
+                    <p class="mt-0"> <a href="{{ path('program_season_show', { programId: program.id, seasonId: season.id }) }}">Saison {{ season.number }}</a></p>
                 {% endfor %}
+            </div>
+             <div class="media-body">
+            <strong>Quelques acteurs de la série :</strong>
+                <ul>
+                    {% for actor in program.actors %}
+                        <li>{{ actor.name }} </li>
+                        <a class="link-return" href="{{ path("actor_show", {'id': actor.id })}}"> Voir sa fiche</a>
+                    {% else %}
+                        <li>Aucun acteur pour cette série</li>
+                    {% endfor %}
+                </ul>
             </div>
         </div>
     </div>
