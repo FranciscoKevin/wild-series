@@ -3,7 +3,7 @@
 {% block title %}All programs{% endblock %}
 
 {% block body %}
-    <h1>All series from he program table : </h1>
+    <h1>All series from the program table : </h1>
     {% for program in programs %}
         <div>
             <h2>{{ loop.index }} / {{ program.title }} - Categoriy : {{ program.category.name }}</h2>

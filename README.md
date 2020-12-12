@@ -6,8 +6,10 @@
 
 - Vidéo 3 démonstration avec CRUD intégration de formulaire ajout ou suppression d'une saison ou d'un épisode dans la base de données : https://www.loom.com/share/afe71b817ef4475b9870fc0631895629
 
-- Vidéo 4 démonstration sur la liaison Many to Many et Ajout des acteurs : https://www.loom.com/share/f973f6326b864db0b422676df8102a2d
+- Vidéo 4 démonstration sur la liaison Many to Many et ajout des acteurs : https://www.loom.com/share/f973f6326b864db0b422676df8102a2d
 
 - Vidéo 5 démonstration sur les constraints validation de formulaire : https://www.loom.com/share/e96a0aaea5db4c2ea7dd13d10cf4d8c0
+
+- Vidéo 6 démonstration sur le formulaire a choix multiple et ajout d'un programme avec des acteurs : https://www.loom.com/share/f77a3cef24ea45f6a52b6384e41f0e7c
 
 
