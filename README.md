@@ -12,4 +12,6 @@
 
 - Vidéo 6 démonstration sur le formulaire a choix multiple et ajout d'un programme avec des acteurs : https://www.loom.com/share/f77a3cef24ea45f6a52b6384e41f0e7c
 
+- Vidéo 7 démonstration avec les fixtures dans la base de données : https://www.loom.com/share/29361ac6b75d4033bf80a7f5977380d7
+
 
