@@ -1,5 +1,7 @@
 <?php
 
+// src/Entity/Episode.php
+
 namespace App\Entity;
 
 use App\Repository\EpisodeRepository;

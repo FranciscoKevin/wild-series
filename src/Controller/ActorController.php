@@ -1,5 +1,7 @@
 <?php
 
+// src/Controller/ActorController.php
+
 namespace App\Controller;
 
 use App\Entity\Actor;
@@ -16,7 +18,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class ActorController extends AbstractController
 {
     /**
+     * Show all rows from Actor's entity
+     * 
      * @Route("/", name="index")
+     * @return Response
      */
     public function index(): Response
     {
@@ -30,6 +35,7 @@ class ActorController extends AbstractController
 
     /**
      * @Route("/{id<^[0-9]+$>}", methods={"GET"}, name="show")
+     * @return Response
      */
     public function show(Actor $actor, Program $program):Response
     {

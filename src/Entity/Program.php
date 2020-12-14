@@ -1,5 +1,7 @@
 <?php
 
+// src/Entity/Program.php
+
 namespace App\Entity;
 
 use App\Repository\ProgramRepository;

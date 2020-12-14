@@ -1,5 +1,7 @@
 <?php
 
+// src/Entity/Season.php
+
 namespace App\Entity;
 
 use App\Repository\SeasonRepository;

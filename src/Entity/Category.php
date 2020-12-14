@@ -1,5 +1,7 @@
 <?php
 
+// src/Entity/Category.php
+
 namespace App\Entity;
 
 use App\Repository\CategoryRepository;

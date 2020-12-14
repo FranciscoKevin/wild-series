@@ -1,5 +1,7 @@
 <?php
 
+// src/Form/SeasonType.php
+
 namespace App\Form;
 
 use App\Entity\Season;

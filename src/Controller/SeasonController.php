@@ -1,5 +1,7 @@
 <?php
 
+// src/Controller/SeasonController.php
+
 namespace App\Controller;
 
 use App\Entity\Season;
@@ -11,12 +13,15 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/season")
+ * @Route("/season", name="season_")
  */
 class SeasonController extends AbstractController
 {
     /**
+     * Show all rows from Season's entity
+     * 
      * @Route("/", name="season_index", methods={"GET"})
+     * @return Response
      */
     public function index(SeasonRepository $seasonRepository): Response
     {
@@ -27,6 +32,7 @@ class SeasonController extends AbstractController
 
     /**
      * @Route("/new", name="season_new", methods={"GET","POST"})
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -44,22 +50,24 @@ class SeasonController extends AbstractController
 
         return $this->render('season/new.html.twig', [
             'season' => $season,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
     /**
      * @Route("/{id}", name="season_show", methods={"GET"})
+     * @return Response
      */
     public function show(Season $season): Response
     {
         return $this->render('season/show.html.twig', [
-            'season' => $season,
+            'season' => $season
         ]);
     }
 
     /**
      * @Route("/{id}/edit", name="season_edit", methods={"GET","POST"})
+     * @return Response
      */
     public function edit(Request $request, Season $season): Response
     {
@@ -74,12 +82,13 @@ class SeasonController extends AbstractController
 
         return $this->render('season/edit.html.twig', [
             'season' => $season,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
     /**
      * @Route("/{id}", name="season_delete", methods={"DELETE"})
+     * @return Response
      */
     public function delete(Request $request, Season $season): Response
     {

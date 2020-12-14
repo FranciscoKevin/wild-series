@@ -1,5 +1,7 @@
 <?php
 
+// src/Controller/EpisodeController.php
+
 namespace App\Controller;
 
 use App\Entity\Episode;
@@ -11,22 +13,26 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/episode")
+ * @Route("/episode", name="episode_")
  */
 class EpisodeController extends AbstractController
 {
     /**
+     * Show all rows from Episode’s entity
+     * 
      * @Route("/", name="episode_index", methods={"GET"})
+     * @return Response
      */
     public function index(EpisodeRepository $episodeRepository): Response
     {
         return $this->render('episode/index.html.twig', [
-            'episodes' => $episodeRepository->findAll(),
+            'episodes' => $episodeRepository->findAll()
         ]);
     }
 
     /**
      * @Route("/new", name="episode_new", methods={"GET","POST"})
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -44,22 +50,24 @@ class EpisodeController extends AbstractController
 
         return $this->render('episode/new.html.twig', [
             'episode' => $episode,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
     /**
      * @Route("/{id}", name="episode_show", methods={"GET"})
+     * @return Response
      */
     public function show(Episode $episode): Response
     {
         return $this->render('episode/show.html.twig', [
-            'episode' => $episode,
+            'episode' => $episode
         ]);
     }
 
     /**
      * @Route("/{id}/edit", name="episode_edit", methods={"GET","POST"})
+     * @return Response
      */
     public function edit(Request $request, Episode $episode): Response
     {
@@ -74,12 +82,13 @@ class EpisodeController extends AbstractController
 
         return $this->render('episode/edit.html.twig', [
             'episode' => $episode,
-            'form' => $form->createView(),
+            'form' => $form->createView()
         ]);
     }
 
     /**
      * @Route("/{id}", name="episode_delete", methods={"DELETE"})
+     * @return Response
      */
     public function delete(Request $request, Episode $episode): Response
     {
