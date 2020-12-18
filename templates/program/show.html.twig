@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %} Série #{{ program.id }} {% endblock %}
+{% block title %} Serie #{{ program.id }} {% endblock %}
 
 {% block body %}
 
@@ -9,27 +9,29 @@
         <div>
             <div class="media-body">
                 <h1 class="mt-0">{{ program.title }}</h1>
-                <p>{{ program.summary }}</p>
-                <p>Catégory: {{ program.category.name }} </p>
+                    <p>{{ program.summary }}</p>
+                    <p> Category: {{ program.category.name }} </p>
             </div>
             <div class="media-body">
                 {% for season in program.seasons %}
-                    <p class="mt-0"> <a href="{{ path('program_season_show', { programId: program.id, seasonId: season.id }) }}">Saison {{ season.number }}</a></p>
+                    <p class="mt-0"> <a href="{{ path('program_season_show', { programSlug: program.slug, seasonId: season.id }) }}">Saison {{ season.number }}</a></p>
                 {% endfor %}
             </div>
-             <div class="media-body">
-            <strong>Quelques acteurs de la série :</strong>
-                <ul>
-                    {% for actor in program.actors %}
-                        <li>{{ actor.name }} </li>
-                        <a class="link-return" href="{{ path("actor_show", {'id': actor.id })}}"> Voir sa fiche</a>
-                    {% else %}
-                        <li>Aucun acteur pour cette série</li>
-                    {% endfor %}
-                </ul>
+            <div class="media-body">
+                <h2>Acteurs :</h2>
+                    <ul>
+                        {% for actor in program.actors %}
+                            <li><a href="{{ path('actor_show', { id: actor.id }) }}">{{ actor.name }} </a> </li>
+                        {% else %}
+                            <li>No actor for this series</li>
+                        {% endfor %}
+                    </ul>
             </div>
         </div>
     </div>
-<a href="{{ path('program_index') }}"> Retour à la liste des programmes</a>
 
+    <a href="{{ path('program_index') }}">
+        Back to the list of programs
+    </a>
+    
 {% endblock %}

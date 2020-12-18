@@ -4,7 +4,7 @@
         <div class="media-body">
             <h1 class="mt-0">{{ actor.name }}</h1>
             <div>
-                <p class="remove-margin">Liste des séries de cet acteur :</p>
+                <p class="remove-margin">List of series by this actor :</p>
                 <ul>
                     {% for program in actor.programs %}
                         <li>
@@ -12,12 +12,12 @@
                         </li>
 
                     {% else %}
-                        <li>Aucun acteur pour cette série</li>
+                        <li>No actor for this series</li>
                     {% endfor %}
                 </ul>
 
             </div>
-            <a class="link-return" href="{{ path('actor_index') }}"> Retour à la liste des acteurs</a>
+            <a class="link-return" href="{{ path('actor_index') }}"> Back to the list of actors</a>
         </div>
     </div>
 {% endblock %}

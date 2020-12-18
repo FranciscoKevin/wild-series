@@ -4,19 +4,14 @@
 
 {% block body %}
     <h1>Episode</h1>
-
     <table class="table">
         <tbody>
             <tr>
-                <th>Id</th>
-                <td>{{ episode.id }}</td>
-            </tr>
-            <tr>
-                <th>Title</th>
+                <th>Titre</th>
                 <td>{{ episode.title }}</td>
             </tr>
             <tr>
-                <th>Number</th>
+                <th>Numéro</th>
                 <td>{{ episode.number }}</td>
             </tr>
             <tr>
@@ -25,10 +20,20 @@
             </tr>
         </tbody>
     </table>
+    
+    <div>
+        <div style="margin-bottom: 5px" >
+            <a href="{{ path('episode_edit', {'slug': episode.slug }) }}">Modifier</a>
+        </div>
+        <div style="margin-bottom: 5px" >
+            <a href="{{ path('episode_index') }}">Retour à la liste des épisodes</a>
+        </div>
+        <div style="margin-bottom: 5px" >
+            <a href="{{ path('season_index') }}">Retour à la liste des saisons</a>
+        </div>
+        <div>
+            {{ include('episode/_delete_form.html.twig') }}
+        </div>
+    </div>
 
-    <a href="{{ path('episode_index') }}">back to list</a>
-
-    <a href="{{ path('episode_edit', {'id': episode.id}) }}">edit</a>
-
-    {{ include('episode/_delete_form.html.twig') }}
 {% endblock %}

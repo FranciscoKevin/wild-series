@@ -3,14 +3,16 @@
 {% block title %}Les acteurs{% endblock %}
 
 {% block body %}
-    <h1>Tous les acteurs de la table actor : </h1>
+    <h1>All the actors of the actor table : </h1>
     {% for actor in actors %}
         <div>
             <p>{{ loop.index }} / {{ actor.name }}</p>
-            <a href="{{ path("actor_show", { id: actor.id }) }}">Voir ses films</a>
+            <a href="{{ path("actor_show", { id: actor.id }) }}">See his films</a>
         </div>
     {% else %}
-        Aucune acteur trouvé.
+        No actor found.
     {% endfor %}
-    <a class="link-return" href="{{ path('app_index') }}">Retour à l'accueil</a>
+    
+    <a class="link-return" href="{{ path('app_index') }}">Return to home</a>
+
 {% endblock %}

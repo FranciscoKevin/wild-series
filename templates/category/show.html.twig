@@ -1,20 +1,30 @@
 {% extends 'base.html.twig' %}
-{% block title %}Catégorie : {{ category.name }}{% endblock %}
+
+{% block title %}
+
+    {% for programsByCategory in programsByCategory %}
+        Category #{{ programsByCategory.category.name }}
+    {% endfor %}
+
+{% endblock %}
 
 {% block body %}
-    <h1 class="mt-0">{{ category.name }}</h1>
-    {% for program in programs %}
-        <ul>
-            <li>
-                <h2>{{ program.id }} / {{ program.title }}</h2>
-                <p>{{ program.summary }}</p>
-                <a href="{{ path("program_show", { id: program.id }) }}">Voir la fiche</a>
-            </li>
-        </ul>
-    {% else %}
-        Aucune série trouvée.
-    {% endfor %}
-    <a href="{{ path('category_index') }}">
-        Retour à la liste des catégories
-    </a>
+    {% if programsByCategory is empty %}
+        <h1> No series corresponds to the category {{ programsByCategory.category.name}} </h1>
+    {% endif %}
+
+    <a href="{{ path('program_index') }}">Back to te list of programs</a>
+    <div class="container-fluid program-container">
+
+    {% for programsByCategory in programsByCategory %}
+            <div class="card col-3">
+                <img class="card-img-top" src="{{ programsByCategory.poster }}" alt="{{ programsByCategory.title }} poster">
+                <div class="card-body">
+                    <h3 class="card-title">{{ programsByCategory.title }} </h3>
+                        <p class="card-text">{{ programsByCategory.summary }}</p>
+                        <a href="{{ path("program_show", {programSlug: programsByCategory.slug}) }}" class="btn btn-primary">Discover</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

@@ -14,4 +14,6 @@
 
 - Vidéo 7 démonstration avec les fixtures dans la base de données : https://www.loom.com/share/29361ac6b75d4033bf80a7f5977380d7
 
+- Vidéo 8 démonstration le service et les slug : https://www.loom.com/share/28e29b2d3bdc4fed9b0ca40d7ec02f4b
+
 

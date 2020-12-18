@@ -9,12 +9,15 @@
             <h2>{{ loop.index }} / <a href="{{ path("category_show", { categoryName : category.name }) }}"> {{ category.name }}</a></h2>
         </div>
     {% else %}
-        Aucune catégorie trouvée.
+        No category found.
     {% endfor %}
+    
     <a href="{{ path('category_new') }}">
         Add a new category
     </a><br>
+
     <a href="{{ path('app_index') }}">
-        Return at home
+        Return to home
     </a>
+
 {% endblock %}

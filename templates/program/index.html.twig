@@ -3,20 +3,17 @@
 {% block title %}All programs{% endblock %}
 
 {% block body %}
-    <h1>All series from the program table : </h1>
+    <h1>All series of the program table: </h1>
     {% for program in programs %}
         <div>
-            <h2>{{ loop.index }} / {{ program.title }} - Categoriy : {{ program.category.name }}</h2>
+            <h2>{{ loop.index }} / {{ program.title }} - Category : {{ program.category.name }}</h2>
             <p>{{ program.summary }}</p>
-            <a href="{{ path("program_show", { id: program.id }) }}">See the notice</a>
+            <a href="{{ path("program_show", { 'slug': program.slug }) }}">See the notice</a>
         </div>
     {% else %}
-        No series found.
+        No series found
     {% endfor %}
-    <a href="{{ path('program_new') }}">
-        Add a new program
-    </a><br>
-    <a href="{{ path('app_index') }}">
-        Return at home
-    </a>
+
+    <a href="{{ path('app_index') }}">Back to home</a>
+    
 {% endblock %}

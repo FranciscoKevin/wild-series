@@ -1,19 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{ episode.title }}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
-    <div class="container-fluid">
-        <div class="container">
-            <div class="season_description">
-                <h1> {{ program.title}} </h1>
-                <h2> Saison {{ season.number }} : <br>
-                    Episode {{ episode.number }} : {{ episode.title }}</h2>
-                <p>{{ episode.synopsis }}</p>
 
-            <a href="{{ path('program_index') }}">
-                Return to the program list
-            </a>
-        </div>
-    </div>
+    <h2>{{ program.title }}, Season {{ season.number }}, Episode {{ episode.number }}</h2>
+    
+        <p>Episode title : {{ episode.title }}</p>
+        <p>Summary : {{ episode.synopsis }}</p>
+
+    <a href="{{ path('program_season_show', { programSlug: program.slug, seasonId: season.id }) }}">Return</a>
+
 {% endblock %}
