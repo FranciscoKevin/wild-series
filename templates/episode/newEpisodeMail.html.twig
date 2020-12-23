@@ -1,0 +1,12 @@
+{% extends 'layoutMail.html.twig' %}
+
+{% block what %}episode {{ episode.title }} - {{ episode.season.program.title }}{% endblock %}
+
+{% block title %}Episode {{ episode.title }}{% endblock %}
+
+{% block summary %}{{episode.synopsis }}{% endblock %}
+
+{% block content %}
+    <p>Number : {{ episode.number }}</p>
+    <a href='http://localhost:8000/programs/{{ episode.season.program.slug }}/season/{{ episode.season.id }}'>Voir la fiche</a>
+{% endblock %}

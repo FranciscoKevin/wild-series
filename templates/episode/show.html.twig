@@ -7,11 +7,11 @@
     <table class="table">
         <tbody>
             <tr>
-                <th>Titre</th>
+                <th>Title</th>
                 <td>{{ episode.title }}</td>
             </tr>
             <tr>
-                <th>Numéro</th>
+                <th>Number</th>
                 <td>{{ episode.number }}</td>
             </tr>
             <tr>
@@ -23,13 +23,10 @@
     
     <div>
         <div style="margin-bottom: 5px" >
-            <a href="{{ path('episode_edit', {'slug': episode.slug }) }}">Modifier</a>
+            <a href="{{ path('episode_index') }}">back to list</a>
         </div>
         <div style="margin-bottom: 5px" >
-            <a href="{{ path('episode_index') }}">Retour à la liste des épisodes</a>
-        </div>
-        <div style="margin-bottom: 5px" >
-            <a href="{{ path('season_index') }}">Retour à la liste des saisons</a>
+             <a href="{{ path('episode_edit', {'slug': episode.slug}) }}">edit</a>
         </div>
         <div>
             {{ include('episode/_delete_form.html.twig') }}

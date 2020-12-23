@@ -8,15 +8,15 @@ use App\Entity\Category;
 use App\Entity\Program;
 use App\Form\CategoryType;
 use App\Repository\CategoryRepository;
+use App\Repository\ProgramRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/categories", name="category_")
+ * @Route("/categories",  name="category_")
  */
  class CategoryController extends AbstractController
 {

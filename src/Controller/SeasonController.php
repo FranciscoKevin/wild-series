@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 /**
- * @Route("/season", name="season_")
+ * @Route("/season")
  */
 class SeasonController extends AbstractController
 {
