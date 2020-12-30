@@ -18,3 +18,4 @@
 
 - Vidéo 9 démonstration avec le mailer et mailtrap : https://www.loom.com/share/331f29f5e841423993caa97938101296
 
+- Vidéo 10 démonstrastion sur les gestionnaires des utilisateurs et de connexion : https://www.loom.com/share/e1d8ed3c189746828e2e421aa8fda113

@@ -8,7 +8,27 @@
     
         <p>Episode title : {{ episode.title }}</p>
         <p>Summary : {{ episode.synopsis }}</p>
+        <div>
+				{% if app.user %}
+					<h3>Leave a comment</h3>
+					<p>
+                        {{ form_start(form) }}
+                        {{ form_errors(form) }}
+                        {{ form_widget(form) }}
+                            <input type='submit' value='Ajouter'>
+                        {{ form_end(form) }}
+                    </p>
+				{% endif %}
 
+            <h3>The opinions</h3
+            {% if comments == true %}
+			    {% for comment in comments %}
+                    <p>Rate : {{ comment.rate }} / 5</p>
+                    <p>Author : {{ comment.user.email }}</p>
+                    <p>Coment : {{ comment.comment }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
     <a href="{{ path('program_season_show', { programSlug: program.slug, seasonId: season.id }) }}">Return</a>
 
 {% endblock %}

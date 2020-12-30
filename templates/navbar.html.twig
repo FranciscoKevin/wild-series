@@ -1,6 +1,44 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">Home</a>
-  <a class="navbar-brand" href="/programs">Programs</a>
-  <a class="navbar-brand" href="/categories">Categories</a>
-  <a class="navbar-brand" href="/actors">Actors</a>
+    <a class="navbar-brand" href="/">Wild Series</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('program_index') }}">Series</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('program_new') }}">Add a new serie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('category_index') }}">Categories</a>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ path('category_new') }}">Add a new category</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{{ path('season_index') }}">Seasons</a>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ path('season_new') }}">Add a new season</a>
+            </li>
+             <li class="nav-item">
+                <a class="nav-link" href="{{ path('episode_index') }}">Episodes</a>
+                <li class="nav-item">
+                <a class="nav-link" href="{{ path('episode_new') }}">add an episode</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('actor_index') }}">Actors</a>
+            </li>
+            <li class="nav-item">
+
+				{% if app.user %}
+					{{ app.user.email }}
+					  <a class="nav-link nav-style" href="{{ path('app_logout') }}">Disconnection</a>
+				{% else %}
+					<a class="nav-link nav-style" href="{{ path('app_login') }}">Connection</a>
+				{% endif %}
+        </ul>
+    </div>
 </nav>
