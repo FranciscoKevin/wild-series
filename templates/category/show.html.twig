@@ -5,6 +5,7 @@
 {% block body %}
     {% for program in programs %}
     <h2><a href="{{ path('program_index', { slug: program.slug }) }}">{{ program.id }} / {{ program.title }}</a></h2>
+        <a href="{{ path('program_edit', { 'slug': program.slug} ) }}">Edit</a>
         <p>{{ program. summary }}</p>
 
     {% else %}

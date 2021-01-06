@@ -15,7 +15,7 @@
                         {{ form_start(form) }}
                         {{ form_errors(form) }}
                         {{ form_widget(form) }}
-                            <input type='submit' value='Ajouter'>
+                            <input type='submit' value='Add'>
                         {{ form_end(form) }}
                     </p>
 				{% endif %}
@@ -26,9 +26,19 @@
                     <p>Rate : {{ comment.rate }} / 5</p>
                     <p>Author : {{ comment.user.email }}</p>
                     <p>Coment : {{ comment.comment }}</p>
+
+                        {% if app.user %}
+                            {% if is_granted("ROLE_ADMIN") or app.user.email == comment.user.email %}
+                                <form method="post" action="{{ path('comment_delete', {'id': comment.id}) }}" onsubmit="return confirm('Are you sure for delete this coment?');">
+										<input type="hidden" name="_method" value="DELETE">
+										<input type="hidden" name="_token" value="{{ csrf_token('delete' ~ comment.id) }}">
+										<button>Delete</button>
+									</form>
+                            {% endif %}
+                        {% endif %}
                 {% endfor %}
             {% endif %}
         </div>
-    <a href="{{ path('program_season_show', { programSlug: program.slug, seasonId: season.id }) }}">Return</a>
+    <a href="{{ path('program_season_show', { programSlug: program.slug, seasonId: season.id }) }}">Return episodes</a>
 
 {% endblock %}

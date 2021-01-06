@@ -11,7 +11,7 @@
                 <th>Id</th>
                 <th>Comment</th>
                 <th>Rate</th>
-                <th>actions</th>
+                <th>Author</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +20,7 @@
                 <td>{{ comment.id }}</td>
                 <td>{{ comment.comment }}</td>
                 <td>{{ comment.rate }}</td>
+                <td>{{ comment.user.email }}</td>
                 <td>
                     <a href="{{ path('comment_show', {'id': comment.id}) }}">show</a>
                     <a href="{{ path('comment_edit', {'id': comment.id}) }}">edit</a>

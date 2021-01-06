@@ -3,7 +3,6 @@
 {% block title %} Serie #{{ program.id }} {% endblock %}
 
 {% block body %}
-
     <div class="media">
         <img class="align-self-start mr-3" src="{{ program.poster }}" alt="{{ program.title }} poster">
         <div>
@@ -29,7 +28,9 @@
             </div>
         </div>
     </div>
-
+    {% if is_granted("ROLE_ADMIN") %}
+        <a href="{{ path('program_edit', { 'slug': program.slug} ) }}">Éditer</a><br>
+    {% endif %}
     <a href="{{ path('program_index') }}">
         Back to the list of programs
     </a>

@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modify a series{% endblock %}
+
+{% block body %}
+    <h1>Modify a series : {{ program.title }}</h1>
+{{ form_start(form) }}
+    {{ form_widget(form) }}
+    <input type="submit" value="Modify">
+{{ form_end(form) }}
+    <a href="{{ path('program_index') }}">Return</a>
+{% endblock %}
