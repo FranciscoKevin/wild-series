@@ -65,7 +65,7 @@ class ProgramController extends AbstractController
             $slug = $slugify->generate($program->getTitle());
             $program->setSlug($slug);
             // Set the program's owner
-             $program->setOwner($this->getUser());
+            $program->setOwner($this->getUser());
             // Persist Category Object
             $entityManager->persist($program);
             // Flush the persisted object

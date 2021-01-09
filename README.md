@@ -20,4 +20,6 @@
 
 - Quête 19 démonstrastion sur les gestionnaires des utilisateurs et de connexion : https://www.loom.com/share/e1d8ed3c189746828e2e421aa8fda113
 
--Quête 20 démonstrastion sur les sécurisations des routes https://www.loom.com/share/5d683a1965d343fc8a455945858c0739
+- Quête 20 démonstrastion sur les sécurisations des routes : https://www.loom.com/share/5d683a1965d343fc8a455945858c0739
+
+- Quête 21 démonstrastion sur l'inscription d'un utilisateur : https://www.loom.com/share/c906b60825974ce2baa05835b6ba05d9

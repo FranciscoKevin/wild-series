@@ -15,4 +15,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('index.html.twig');
     }
+
+    /**
+     * @Route("/my-profile", name="user_space")
+     */
+    public function userAccount(): Response
+    {
+        return $this->render('profil.html.twig');
+    }
 }
