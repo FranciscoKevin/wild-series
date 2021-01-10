@@ -14,7 +14,7 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 /**
  * @Route("/episode")
@@ -56,6 +56,9 @@ class EpisodeController extends AbstractController
                 ->html($this->renderView('episode/newEpisodeMail.html.twig', ['episode' => $episode]));
 
             $mailer->send($email);
+
+            $this->addFlash('success', 'The new episode has been created');
+
             return $this->redirectToRoute('episode_index');
         }
 
@@ -108,6 +111,8 @@ class EpisodeController extends AbstractController
             $entityManager->remove($episode);
             $entityManager->flush();
         }
+
+        $this->addFlash('danger', 'The new episode has been deleted');
 
         return $this->redirectToRoute('episode_index');
     }

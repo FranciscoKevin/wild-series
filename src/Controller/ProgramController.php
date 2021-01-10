@@ -23,6 +23,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 
 /**
@@ -36,8 +37,14 @@ class ProgramController extends AbstractController
      * @Route("/", name="index")
      * @return Response
      */
-    public function index(Request $request, ProgramRepository $programRepository): Response
+    public function index(Request $request, ProgramRepository $programRepository, SessionInterface $session): Response
     {
+        if (!$session->has('total')) {
+            $session->set('total', 0); // if total doesn’t exist in session, it is initialized.
+        }
+    
+        $total = $session->get('total'); // get actual value in session with ‘total' key
+
         $form = $this->createForm(SearchProgramType::class);
         $form->handleRequest($request);
 
@@ -90,6 +97,9 @@ class ProgramController extends AbstractController
                 ->html($this->renderView('program/newProgramMail.html.twig', ['program' => $program]));
 
             $mailer->send($email);
+
+            $this->addFlash('success', 'The new program has been created');
+            
             // Finally redirect to categories list
             return $this->redirectToRoute('program_index');
         }

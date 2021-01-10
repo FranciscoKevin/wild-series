@@ -24,4 +24,6 @@
 
 - Quête 21 démonstrastion sur l'inscription d'un utilisateur : https://www.loom.com/share/c906b60825974ce2baa05835b6ba05d9
 
-Quête 22 démonstrastion sur un formulaire de recherche dans une entité : https://www.loom.com/share/3b49550a8adb49cf9f930be2ba3ef254
+- Quête 22 démonstrastion sur un formulaire de recherche dans une entité : https://www.loom.com/share/3b49550a8adb49cf9f930be2ba3ef254
+
+- Quête 23 démonstrastion sur les sessions et les messages alert : https://www.loom.com/share/9ac28bef033245239e082589c140cf7e

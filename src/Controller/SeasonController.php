@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 
 
 /**
@@ -45,6 +46,8 @@ class SeasonController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($season);
             $entityManager->flush();
+
+            $this->addFlash('success', 'The new season has been created');
 
             return $this->redirectToRoute('season_index');
         }
@@ -98,6 +101,8 @@ class SeasonController extends AbstractController
             $entityManager->remove($season);
             $entityManager->flush();
         }
+
+        $this->addFlash('danger', 'The new episode has been deleted');
 
         return $this->redirectToRoute('season_index');
     }
