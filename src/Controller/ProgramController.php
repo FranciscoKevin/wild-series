@@ -15,6 +15,7 @@ use App\Form\SearchProgramType;
 use App\Service\Slugify;
 use App\Repository\ProgramRepository;
 use App\Repository\CommentRepository;
+use App\Repository\CategoryRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\ParamConverter;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
@@ -216,6 +217,13 @@ class ProgramController extends AbstractController
 
         return $this->json([
             'isInWatchList' => $this->getUser()->isInWatchList($program)
+        ]);
+    }
+
+    public function navbartop(CategoryRepository $categoryRepository): Response
+    {
+        return $this->render('navbartop.html.twig', [
+            'categories' => $categoryRepository->findBy([], ['id' => 'DESC'])
         ]);
     }
 }

@@ -10,10 +10,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('program_index') }}">{{'Series'|trans}}</a>
             </li>
+                {{ render(controller('App\\Controller\\ProgramController::navbartop')) }}
             <li class="nav-item">
-                <a class="nav-link" href="{{ path('category_index') }}">{{'Categories'|trans}}</a>
-                <li class="nav-item">
-             <li class="nav-item">
                 <a class="nav-link" href="{{ path('season_index') }}">{{'Seasons'|trans}}</a>
              <li class="nav-item">
                 <a class="nav-link" href="{{ path('episode_index') }}">{{'Episodes'|trans}}</a>
@@ -29,15 +27,14 @@
 				    <a class="nav-link nav-style" href="{{ path('app_login') }}">
 					{{ 'account.login'|trans }}</a>
 			{% endif %}
-		</li>
-		<li class="nav-item">
+		    </li>
+		    <li class="nav-item">
 			{% if app.user %}
 				<a class="nav-link nav-style" href="{{ path('user_space') }}">{{ 'my.account'|trans }}</a>
 			{% else %}
 				<a class="nav-link nav-style" href="{{ path('app_register') }}">{{ 'account.create'|trans }}</a>
 			{% endif %}
-		</li>
-            </li>
+		    </li>
         </ul>
     </div>
     <div class="dropdown">

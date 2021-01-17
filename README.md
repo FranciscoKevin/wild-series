@@ -29,3 +29,5 @@
 - Quête 23 démonstrastion sur les sessions et les messages alert : https://www.loom.com/share/9ac28bef033245239e082589c140cf7e
 
 - Quête 25 démonstrastion sur les internationalisation : https://www.loom.com/share/3744c32804dd43c9b7f8572544b27a06
+
+- Quête 26 démonstrastion sur les Embedding Controller : https://www.loom.com/share/f299e532f706435dbb4b4ae22beec3d9
