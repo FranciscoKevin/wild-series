@@ -3,8 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}{{'Welcome'|trans}}{% endblock %}</title>
         {% block stylesheet %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
@@ -26,7 +25,7 @@
         {% endblock %}
 
         {% block javascripts %}
-            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_script_tags('app') }}
         {% endblock %}
     </body>
 </html>

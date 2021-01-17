@@ -1,9 +1,9 @@
 {% extends 'base.html.twig'%}
 
-{% block title %}All categories{% endblock %}
+{% block title %}{{'All.category'|trans}}{% endblock %}
 
 {% block body %}
-    <h1>All categories from the table category </h1>
+    <h1>{{'All.category'|trans}}</h1>
     {% for category in categories %}
         <div>
             <h2><a href="{{ path("category_show", { categoryName : category.name }) }}"> {{ category.name }}</a></h2>

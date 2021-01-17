@@ -8,6 +8,11 @@
         <div>
             <div class="media-body">
                 <h1 class="mt-0">{{ program.title }}</h1>
+                {% if app.user %}
+                    <button id="watchList">
+                        <i id="watchlistIcon" class="{{ app.user.isInWatchList(program) ? 'fas' : 'far' }} fa-heart watchList" data-href=”{{path('program_watchlist', {id: program.id}) }}”></i>
+                    </button>
+                {% endif %}
                     <p>{{ program.summary }}</p>
                     <p> Category: {{ program.category.name }} </p>
             </div>

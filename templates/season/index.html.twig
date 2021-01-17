@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Season index{% endblock %}
+{% block title %}{{'Season.index'|trans}}{% endblock %}
 
 {% block body %}
-    <h1>Season index</h1>
+    <h1>{{'Season.index'|trans}}</h1>
 
     <table class="table">
         <thead>
@@ -29,7 +29,7 @@
             </tr>
         {% else %}
             <tr>
-                <td colspan="5">No records found</td>
+                <td colspan="5">{{'No.records.found'|trans}}</td>
             </tr>
         {% endfor %}
         </tbody>

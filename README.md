@@ -27,3 +27,5 @@
 - Quête 22 démonstrastion sur un formulaire de recherche dans une entité : https://www.loom.com/share/3b49550a8adb49cf9f930be2ba3ef254
 
 - Quête 23 démonstrastion sur les sessions et les messages alert : https://www.loom.com/share/9ac28bef033245239e082589c140cf7e
+
+- Quête 25 démonstrastion sur les internationalisation : https://www.loom.com/share/3744c32804dd43c9b7f8572544b27a06

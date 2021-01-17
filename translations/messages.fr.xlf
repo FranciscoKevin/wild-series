@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Q7UTU9q" resname="account.logout">
+        <source>account.logout</source>
+        <target>Se déconnecté</target>
+      </trans-unit>
+      <trans-unit id="E_t5j6Q" resname="account.login">
+        <source>account.login</source>
+        <target>Se connecté </target>
+      </trans-unit>
+      <trans-unit id="WM.2ack" resname="my.account">
+        <source>my.account</source>
+        <target>Mon compte</target>
+      </trans-unit>
+      <trans-unit id="Q5gj5cV" resname="account.create">
+        <source>account.create</source>
+        <target>Créer un compte</target>
+      </trans-unit>
+      <trans-unit id="4Iw_0TN" resname="All.category">
+        <source>All.category</source>
+        <target>Toutes les catégories</target>
+      </trans-unit>
+      <trans-unit id="YFtyfT9" resname="actors">
+        <source>actors</source>
+        <target>acteurs</target>
+      </trans-unit>
+      <trans-unit id="7xdvtNP" resname="Actors.dictionary">
+        <source>Actors.dictionary</source>
+        <target>Dictionnaire des acteurs</target>
+      </trans-unit>
+      <trans-unit id="CZPbs0R" resname="List.of.series.by.this.actor">
+        <source>List.of.series.by.this.actor</source>
+        <target>Liste des séries de cet acteur</target>
+      </trans-unit>
+      <trans-unit id="DiImtSN" resname="Welcome">
+        <source>Welcome</source>
+        <target>Bienvenue</target>
+      </trans-unit>
+      <trans-unit id="tqyQI4Q" resname="Welcome.to.the.Wild.Series">
+        <source>Welcome.to.the.Wild.Series</source>
+        <target>Bienvenue sur Wild Series</target>
+      </trans-unit>
+      <trans-unit id="JwB5kMc" resname="New.program">
+        <source>New.program</source>
+        <target>Nouveau programme</target>
+      </trans-unit>
+      <trans-unit id="qCleCP9" resname="Series">
+        <source>Series</source>
+        <target>Séries</target>
+      </trans-unit>
+      <trans-unit id="uLHYlMa" resname="Categories">
+        <source>Categories</source>
+        <target>Catégories</target>
+      </trans-unit>
+      <trans-unit id="wVUnsZu" resname="Seasons">
+        <source>Seasons</source>
+        <target>Saisons</target>
+      </trans-unit>
+      <trans-unit id="g.lyLZu" resname="Episodes">
+        <source>Episodes</source>
+        <target>Episodes</target>
+      </trans-unit>
+      <trans-unit id="_waRj.e" resname="Actors">
+        <source>Actors</source>
+        <target>Acteurs</target>
+      </trans-unit>
+      <trans-unit id="aMSutYz" resname="My.profile">
+        <source>My.profile</source>
+        <target>Mon profil</target>
+      </trans-unit>
+      <trans-unit id="lKM0GE9" resname="My.informations">
+        <source>My.informations</source>
+        <target>Mes informations</target>
+      </trans-unit>
+      <trans-unit id="rPxb54W" resname="Disconnect">
+        <source>Disconnect</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="_h6DxHI" resname="All.episodes">
+        <source>All.episodes</source>
+        <target>Tous les épisodes</target>
+      </trans-unit>
+      <trans-unit id="utK4k_W" resname="Season">
+        <source>Season</source>
+        <target>Saison</target>
+      </trans-unit>
+      <trans-unit id="G_tZn9s" resname="Season.index">
+        <source>Season.index</source>
+        <target><![CDATA[>Saison index]]></target>
+      </trans-unit>
+      <trans-unit id="sPLnQLO" resname="No.records.found">
+        <source>No.records.found</source>
+        <target>Aucun enregistrement trouvé</target>
+      </trans-unit>
+      <trans-unit id="tnRwZLK" resname="Programs">
+        <source>Programs</source>
+        <target>Les programmes</target>
+      </trans-unit>
+      <trans-unit id="9g9COSB" resname="All.programs">
+        <source>All.programs</source>
+        <target>Tous les programmes</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

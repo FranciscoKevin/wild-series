@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Season {{ season.number}} - {{ program.title }}{% endblock %}
+{% block title %}{{'Season'|trans}} {{ season.number}} - {{ program.title }}{% endblock %}
 
 {% block body %}
-    <h2>Season {{ season.number }} de {{ program.title }}</h2>
+    <h2>{{'Season'|trans}} {{ season.number }} de {{ program.title }}</h2>
         <p>{{ season.description }}</p>
         <p>Diffusion : {{ season.year }}</p>
         <p>>List of episodes :</p>

@@ -24,6 +24,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use Doctrine\ORM\EntityManagerInterface;
 
 
 /**
@@ -196,6 +197,25 @@ class ProgramController extends AbstractController
             'episode' => $episode,
             'form' => $form->createView(),
             'comments' => $comments
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/watchlist", name="watchlist", methods={"GET","POST"})
+     * @return Response
+     */
+    public function addToWatchList(Request $request, Program $program, EntityManagerInterface $em): Response
+    {
+        if ($this->getUser()->getWatchList()->contains($program)) {
+            $this->getUser()->removeWatchList($program);
+        } else {
+            $this->getUser()->addWatchList($program);
+        }
+
+        $em->flush();
+
+        return $this->json([
+            'isInWatchList' => $this->getUser()->isInWatchList($program)
         ]);
     }
 }

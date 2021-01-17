@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}All programs{% endblock %}
+{% block title %}{{'Programs'|trans}}{% endblock %}
 
 {% block body %}
 {{ app.session.get('total') }}
-    <h1>All series of the program table: </h1>
+    <h1>{{'All.programs'|trans}} </h1>
         
         {{ form_start(form) }}
         {{ form_widget(form) }}

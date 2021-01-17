@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Les acteurs{% endblock %}
+{% block title %}{{ 'actors'|trans }}{% endblock %}
 
 {% block body %}
-    <h1>All the actors of the actor table : </h1>
+    <h1>{{ 'Actors.dictionary'|trans}}</h1>
     {% for actor in actors %}
         <div>
             <p>{{ loop.index }} / {{ actor.name }}</p>
