@@ -1,5 +1,9 @@
-# wild-series
+# wild-series - Symfony 5.*
 
+It is a project in the form of quests to be completed during training at the Wild Code School.
+In order to learn by practicing with the PHP language as well as the Symfony framework.
+
+# Quests
 - Quête 9-10 démonstration sur les séries : https://www.loom.com/share/1522eed81fca4d0587dc6e995ea9474c
 
 - Quête 11 démonstration sur l'ajout des programmes et catégories : https://www.loom.com/share/3d26fc06b6914c92845c2d8f2b70db95
